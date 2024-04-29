@@ -1,0 +1,12 @@
+:host {
+  .legend {
+    small {
+      font-size: x-small;
+    }
+  }
+}
+
+.img-carousel {
+  max-height: 520px; /* Ajusta la altura máxima según tus necesidades */
+  width: auto; /* La anchura se ajustará automáticamente para mantener la proporción de aspecto */
+}

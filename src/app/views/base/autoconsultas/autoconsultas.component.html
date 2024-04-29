@@ -1,0 +1,40 @@
+
+<div class="container">
+    <h2>Ordenar los Precios de Manera Descendente</h2>
+    <button class="btnprecio" (click)="ordenarAutosPorPrecio()">Ordenar por Precio</button>
+</div>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th class="precio-column">Precio</th>
+            <th>Color</th>
+            <th>Capacidad</th>
+            <th>Transmisión</th>
+            <th>Precio/Venta</th>
+            <th>Disponibilidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let auto of listaAutos">
+            <td>{{ auto.marca }}</td>
+            <td>{{ auto.modelo }}</td>
+            <td>{{ auto.year }}</td>
+            <td class="precio-column">{{ auto.precio }}</td>
+            <td>{{ auto.color }}</td>
+            <td>{{ auto.capacidad }}</td>
+            <td>{{ auto.transmision }}</td>
+            <td>{{ auto.precioventa }}</td>
+            <td>{{ auto.disponibilidad }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div *ngIf="mostrarMensaje" class="mensaje-emergente">
+    <p><span>Los precios están ordenados de Mayor a Menor.</span></p>
+</div>

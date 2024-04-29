@@ -1,0 +1,11 @@
+.image-container {
+    width: 100%;  //Asegúrate de que la imagen ocupe todo el ancho del contenedor 
+    height: 100%;  //Asegúrate de que la imagen ocupe todo el alto del contenedor 
+    overflow: hidden; // Oculta cualquier parte de la imagen que esté fuera del contenedor 
+}
+  
+img {
+    width: 100%;  //Asegúrate de que la imagen ocupe todo el ancho del contenedor *
+    height: 100%; //Asegúrate de que la imagen ocupe todo el alto del contenedor *
+    overflow: hidden;
+}

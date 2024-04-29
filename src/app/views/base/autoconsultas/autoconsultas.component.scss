@@ -1,0 +1,311 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: linear-gradient(to left, red 0%, orange 30%, yellow 60%, green 100%); */
+  background: linear-gradient(to left, blue 0%, turquoise 50%, rgb(74, 234, 74) 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  font-size: 34px;
+  color: #0b0202;
+  text-decoration: underline;
+  font-family: 'ALGERIAN', sans-serif;
+  margin: 0;
+  padding-right: 20px; // Espacio entre el texto y el botón 
+  //transform: rotate(-10deg); // Giro del texto 
+}
+
+.container button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  //transform: rotate(10deg); // Giro del botón 
+}
+.container button:hover {
+  background-color: #515355; // Cambio de color al pasar el mouse 
+  transform: scale(1.1);
+}
+.container button:active {
+  transform: scale(0.9); // Reduce el tamaño del botón al hacer clic 
+  box-shadow: none;
+}
+
+.table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table thead th {
+  background: linear-gradient(to right, #000, #6c6b6a); // Degradado de colores para el fondo del encabezado 
+  color: #fff; // Color del texto en el encabezado 
+}
+.table tbody td {
+  padding: 8px;  
+  border: rgb(9, 9, 9) 2px solid;
+}
+
+.precio-column {
+  background-color: #9fcaf0;
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para el contenedor del mensaje emergente */
+.mensaje-emergente {
+  position: fixed; // Posiciona el mensaje en un lugar fijo en la pantalla 
+  top: 50%; // Posiciona la parte superior del mensaje en el 50% de la altura de la pantalla 
+  left: 50%; // Posiciona la parte izquierda del mensaje en el 50% del ancho de la pantalla 
+  transform: translate(-50%, -50%); // Compensa la mitad del ancho y alto del mensaje para centrarlo 
+  background-color: #ed0808; // Color de fondo blanco para el mensaje 
+  color: #fff; //Color del texto
+  padding: 20px; // Espacio alrededor del texto del mensaje 
+  border: 1px solid #370ce6; // Borde gris claro alrededor del mensaje 
+  border-radius: 5px; // Bordes redondeados para un aspecto más suave 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra para dar profundidad 
+  z-index: 100; // Asegura que el mensaje aparezca sobre otros elementos 
+  animation: aparecer 0.5s ease-in-out forwards; // Animación de aparición 
+}
+/* Animación de aparición */
+@keyframes aparecer {
+  0% {
+    opacity: 0; // Comienza invisible 
+    transform: translateY(50px); // Movido hacia arriba 
+  }
+  100% {
+    opacity: 1; // Termina visible 
+    transform: translateY(0); // Vuelve a su posición original 
+  }
+}
+
+/* Estilo para el párrafo del mensaje */
+.mensaje-emergente p {
+  font-family: 'Arial', sans-serif; // Fuente sin serif para mejor legibilidad 
+  margin: 0; // Elimina el margen predeterminado del párrafo 
+  text-align: center; // Alinea el texto del mensaje al centro 
+  line-height: 1.6;
+}
+
+/* ===== ESTILOS PARA EL PARRAFO ===== */
+p {
+  text-align: center; /* Centra el contenido del párrafo */
+}
+
+p span {
+  font-weight: bold; /* Hace que el texto dentro del span sea negrita */
+  font-size: 25px; /* Tamaño de fuente más grande */
+}
+
+/* ===== Estilo para el contenedor del mensaje emergente ===== */
+/* .mensaje-emergente {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2; //Color de fondo claro 
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+} */
+
+/* Estilo para el icono de alerta */
+/* .mensaje-emergente .icono-alerta {
+  float: left; //Coloca el icono a la izquierda del mensaje 
+  margin-right: 15px; //Espacio entre el icono y el texto 
+  font-size: 24px;
+  color: #ff9900; //Color naranja para resaltar la alerta 
+} */
+
+/* Estilo para el párrafo del mensaje */
+/* .mensaje-emergente p {
+  font-family: 'Arial', sans-serif; //Fuente legible y amigable 
+  margin: 0;
+  text-align: center;
+  line-height: 1.6; //Espacio entre líneas para mejorar la legibilidad 
+} */
+
+/* Estilo para el botón de cierre */
+/* .mensaje-emergente .btn-cerrar {
+  display: block; //Ocupa todo el ancho 
+  margin: 20px auto 0 auto; //Centra el botón 
+  padding: 10px 20px;
+  background-color: #4CAF50; //Color verde para indicar acción positiva 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Estilo para el botón de cierre al pasar el cursor */
+/* .mensaje-emergente .btn-cerrar:hover {
+  background-color: #45a049; //Verde más oscuro al pasar el cursor 
+} */
+
+
+$thick : 3px;
+$pad : 0.7em;
+$extra : calc(#{$pad} * 1.2);
+$color : #f26522;
+
+
+.portfolio-experiment {
+  background: #2d2d2d;
+  
+  a {
+    color: white;
+    padding: $pad $extra;
+    display: inline-block;
+    border: $thick solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+
+    .text {
+      // padding: 0 0.3em;
+      font-family: proxima-nova, monospace;
+      transform: translate3d(0,$pad,0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -$thick;
+      left: $extra;
+      right: $extra;
+      height: $thick;
+      background: $color;
+      // z-index: -1;
+      transition: 
+        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transform-origin: left;
+    }
+
+  }
+
+  .line {
+    position: absolute;
+    background: $color;
+
+    &.-right,
+    &.-left {
+      width: $thick;
+      bottom: -$thick;
+      top: -$thick;
+      transform: scale3d(1,0,1);
+    }  
+
+    &.-top,
+    &.-bottom {
+      height: $thick;
+      left: -$thick;
+      right: -$thick;
+      transform: scale3d(0,1,1);
+    }
+
+    &.-right {
+      right: -$thick;
+      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+      transform-origin: top;
+    }
+
+    &.-top {
+      top: -$thick;
+      transition: transform 0.08s linear 0.43s;
+      transform-origin: left;
+    }
+
+    &.-left {
+      left: -$thick;
+      transition: transform 0.08s linear 0.51s;
+      transform-origin: bottom;
+    }
+
+    &.-bottom {
+      bottom: -$thick;
+      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transform-origin: right;
+    }  
+  }
+
+  a:hover,
+  a:active {
+
+    .text {
+      transform: translate3d(0,0,0);
+      transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      transform: scale3d(0,1,1);
+      right: -$thick;
+      left: -$thick;
+      transform-origin: right;
+      transition: 
+        transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+        right 0.2s cubic-bezier(1,0,.65,1.01),
+        left 0s 0.3s;
+    }
+
+    .line {
+      transform: scale3d(1,1,1);
+
+      &.-right {
+        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+        transform-origin: bottom;
+      }
+
+      &.-top {
+        transition: transform 0.08s linear 0.4s;
+        transform-origin: right;
+      }
+
+      &.-left {
+        transition: transform 0.08s linear 0.48s;
+        transform-origin: top;
+      }
+
+      &.-bottom {
+        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+        transform-origin: left;
+      }
+    }
+  }
+
+  .mensaje {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+  }
+  
+  .mensaje p {
+    margin: 0;
+  }
+}
+  

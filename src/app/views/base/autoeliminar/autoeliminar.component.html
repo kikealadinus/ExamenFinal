@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Eliminar Autos por Disponibilidad</h2>
+    <div class="form-group">
+        <b *ngIf="mensaje"class="mensaje" role="alert">
+            {{ mensaje }}
+        </b>
+        <select class="form-control" id="disponibilidad" [(ngModel)]="disponibilidadSeleccionada">
+            <option value="Disponible">Disponible</option>
+            <option value="Reservado">Reservado</option>
+            <option value="Vendido">Vendido</option>
+        </select>
+        <button class="btn-mostrar" (click)="buscarAutosPorDisponibilidad()">Mostrar</button>        
+    </div>
+</div>
+
+<table class="table">
+    <thead class="">
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Color</th>
+            <th>Precio $</th>
+            <th>Transmisión</th>
+            <th>Disponibilidad</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let auto of autosPorDisponibilidad">
+            <td>{{ auto.marca }}</td>
+            <td>{{ auto.modelo }}</td>
+            <td>{{ auto.year }}</td>
+            <td>{{ auto.color }}</td>
+            <td>{{ auto.precio }}</td>
+            <td>{{ auto.transmision }}</td>
+            <td class="disponibilidad-column">{{ auto.disponibilidad }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="eliminarAuto(auto)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

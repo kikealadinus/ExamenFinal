@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 34px;
+    color: #0b0202;
+    text-decoration: underline;
+    font-family: 'ALGERIAN', sans-serif;
+    margin: 0;
+    padding-right: 20px; // Espacio entre el texto y el botón 
+    //transform: rotate(-10deg); // Giro del texto 
+}
+
+.container button {
+    background-color: #0d00ff;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    //transform: rotate(10deg); // Giro del botón 
+}
+.container button:hover {
+    background-color: #0056b3; // Cambio de color al pasar el mouse 
+    transform: scale(1.1);
+}
+.container button:active {
+    transform: scale(0.9); /* Reduce el tamaño del botón al hacer clic */
+    box-shadow: none;
+}
+
+/* ===== ESTILOS PARA EL MODAL ===== */
+
+
+
+/* ===== ESTILOS PARA EL TITULO H5 ===== */
+h5 span{
+    font-weight: bold;
+    font-family: 'ALGERIAN', sans-serif;
+    font-size: 30px;    
+}
+
+/* ===== ESTILOS PARA EL PARRAFO ===== */
+p {
+    text-align: center; /* Centra el contenido del párrafo */
+}
+
+p span {
+    font-weight: bold; /* Hace que el texto dentro del span sea negrita */
+    font-size: 40px; /* Tamaño de fuente más grande */
+}
+
+/* ===== ESTILOS PARA LA TABLA ===== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table thead th {
+    background: linear-gradient(to right, #fe5c34, #feb47b); /* Degradado de colores para el fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+}
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+.table tbody tr:hover {
+    background-color: #eaeaea; /* Cambio de color al pasar el mouse sobre una fila */
+}
+.table tbody td {
+    padding: 8px;
+}
+
+.table tbody tr td:nth-child(6) {
+    font-weight: bold; /* Hace que el texto en la sexta columna sea negrita */
+    color: #dc3545; /* Color rojo para resaltar el precio de venta */
+}

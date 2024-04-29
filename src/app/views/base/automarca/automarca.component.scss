@@ -1,0 +1,73 @@
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .form-group input[type="text"] {
+    margin-right: 30px;
+    width: 50%;
+  }
+
+  /* Estilo general para la tabla */
+table {
+  width: 100%; /* Ajusta el ancho de la tabla al 100% del contenedor */
+  margin-bottom: 20px; /* Añade un margen inferior para separar la tabla de otros elementos */
+}
+
+/* Estilo para el encabezado de la tabla */
+thead {
+  background-color: #343a40; //Color de fondo gris oscuro para el encabezado 
+  color: #fff; //Color de texto blanco para el encabezado 
+  //text-align: center; //Alinea el texto del encabezado al centro 
+}
+
+/* Estilo para las celdas del encabezado */
+th {
+  padding: 10px 20px; /* Añade espacio alrededor del texto de las celdas del encabezado */
+  border: 1px solid #fff; /* Añade un borde blanco a las celdas del encabezado */
+}
+
+/* Estilo para las filas del cuerpo de la tabla */
+tbody tr {
+  background-color: #f8f9fa; /* Color de fondo gris claro para las filas */
+  transition: background-color 0.3s ease; /* Añade una transición suave al cambiar el color de fondo al pasar el cursor */
+}
+
+/* Estilo para las celdas del cuerpo de la tabla */
+td {
+  padding: 10px; /* Añade espacio alrededor del texto de las celdas del cuerpo */
+  border: 1px solid #ddd; /* Añade un borde gris claro a las celdas del cuerpo */
+}
+
+/* Estilo para las filas alternas (rayas de cebra) */
+tbody tr:nth-child(odd) {
+  background-color: #fff; /* Color de fondo blanco para las filas alternas */
+}
+
+/* Estilo para la fila al pasar el cursor */
+tbody tr:hover {
+  background-color: #e8e8e8; /* Color de fondo gris claro al pasar el cursor sobre una fila */
+}
+  
+  /* .form-group .btnBuscar {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 5px;
+  } */
+  /* .form-group .btnReset {
+    border: 2px solid #dc3545;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  } */
+  /* .form-group .btnBuscar, .btnReset {
+    margin-bottom: 10px;
+  } */
+  /* .form-group .btnBuscar {
+    background-color: red;
+    color: white;
+  } */

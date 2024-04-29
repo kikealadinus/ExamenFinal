@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Autos por marca</h2>
+    <div class="form-group">
+        <input type="text" class="form-control" name="marca" id="marca" [(ngModel)]="marcaBuscada">
+        <button class="btn btn-danger" (click)="buscarAutosPorMarca()">Buscar</button>
+        <button class="btn btn-outline-warning mx-3" type="button" (click)="resetearInput()">Resetear</button>
+    </div>
+</div>
+
+<div *ngIf="mensaje">
+    <p>{{ mensaje }}</p>
+</div>
+<div *ngIf="!marcaEncontrada" style="display: none;">
+    <p>No se encontraron autos para la marca "{{ marcaBuscada }}"</p>
+</div>
+
+<div *ngFor="let auto of listaAutosPorMarca">
+    <table class="table table-striped table-bordered table-hover" *ngIf="tablaVisible">
+        <thead class="">
+            <tr>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Año</th>
+                <th scope="col">Color</th>
+                <th scope="col">Transmisión</th>
+                <th scope="col">Precio $</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ auto.marca }}</td>
+                <td>{{ auto.modelo }}</td>
+                <td>{{ auto.year }}</td>
+                <td>{{ auto.color }}</td>
+                <td>{{ auto.transmision }}</td>
+                <td>{{ auto.precio }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

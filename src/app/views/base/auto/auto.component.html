@@ -1,0 +1,178 @@
+<!-- <c-row ngPreserveWhitespaces>
+  <c-col span="12">
+    <c-card-header>
+      <strong>FORMULARIO DE REGISTRO</strong>
+    </c-card-header>
+    <c-card-body>
+      <form cForm>
+        <div class="mb-3">
+          <label cLabel for="marca">Marca</label>
+          <input cFormControl
+                 id="marca"
+                 placeholder="Ingrese la marca"
+                 type="text"/>
+        </div>
+        <div class="mb-3">
+          <label cLabel for="modelo">Modelo</label>
+          <input cFormControl
+                 id="modelo"
+                 placeholder="Ingrese el modeo"
+                 type="text"/>
+        </div>
+        <div class="mb-3">
+          <label cLabel for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea cFormControl id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+
+      <c-row>
+        <c-col>
+          <button cButton color="success">Guardar</button>
+        </c-col>
+      </c-row>
+
+    </c-card-body>
+  </c-col>
+</c-row> -->
+
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Registro de Autmóviles</strong>
+      </c-card-header>
+      <c-card-body>   
+        <form cForm>
+          <div class="row">
+            <div class="col-md-3">
+              <strong for="marca" class="form-label">Marca:</strong>
+              <input type="text" class="form-control" id="marca" [(ngModel)]="auto.marca" name="marca" required>
+            </div>
+            <div class="col-md-3">
+              <strong for="modelo" class="form-label">Modelo:</strong>
+              <input type="text" class="form-control" id="modelo" [(ngModel)]="auto.modelo" name="modelo" required>
+            </div>
+            <div class="col-md-3">
+              <strong for="year" class="form-label">Año:</strong>
+              <input type="number" class="form-control" id="year" [(ngModel)]="auto.year" name="year" required>
+            </div>
+            <div class="col-md-3">
+              <strong for="color" class="form-label">Color:</strong>
+              <input type="text" class="form-control" id="color" [(ngModel)]="auto.color" name="color" required>
+            </div>
+            <div class="col-md-3 mt-3">
+              <strong for="tipocombustible" class="form-label">Tipo/Combustible:</strong>
+              <select id="tipocombustible" class="form-select" [(ngModel)]="auto.tipocombustible" name="tipocombustible">
+                <option>Seleccione combustible...</option>
+                <option value="Gasolina">Gasolina</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Gas GNV">Gas GNV</option>
+              </select>
+            </div>
+            <div class="col-md-3 mt-3">
+              <strong for="capacidad" class="form-label">Capacidad/Personas:</strong>
+              <input type="text" class="form-control" id="capacidad" [(ngModel)]="auto.capacidad" name="capacidad"  required>
+            </div>            
+            <div class="col-md-3 mt-3">
+              <strong for="transmision" class="form-label">Tipo/Transmisión:</strong>
+              <select id="transmision" class="form-select" [(ngModel)]="auto.transmision" name="transmision">
+                <option>Seleccione la transmisión...</option>
+                <option value="Caja Mecánica">Caja Mecánica</option>
+                <option value="Caja Automática">Caja Automática</option>
+              </select>
+            </div>
+            <div class="col-md-3 mt-3">
+              <strong for="precio" class="form-label">Precio $:</strong>
+              <input type="text" class="form-control" id="precio" [(ngModel)]="auto.precio" name="precio" required>
+            </div>
+            <div class="col-md-3 mt-3">
+              <strong for="precioventa" class="form-label">Precio/Vendido $:</strong>
+              <input type="number" class="form-control" id="precioventa" [(ngModel)]="auto.precioventa" name="precioventa">
+            </div>
+            <div class="col-md-3 mt-3">
+              <strong for="disponiblidad" class="form-label">Disponibilidad:</strong>
+              <select id="disponiblidad" class="form-select" [(ngModel)]="auto.disponibilidad" name="disponiblidad">
+                <option>Seleccione la disponibilidad...</option>
+                <option value="Vendido">Vendido</option>
+                <option value="Disponible">Disponible</option>
+                <option value="Reservado">Reservado</option>
+              </select>
+            </div>
+            <div class="col-md-3 mt-3">
+              <strong for="prioridad" class="form-label">Prioridad:</strong>
+              <input type="number" class="form-control" id="prioridad" [(ngModel)]="auto.prioridad" name="prioridad">
+            </div>
+            <div class="mb-3 mt-3">
+              <strong for="descripcion" class="form-label">Descripción:</strong>
+              <textarea class="form-control" id="descripcion" [(ngModel)]="auto.descripcion" name="descripcion" rows=""></textarea>
+            </div>            
+            <div class="col-md-9">
+              <button (click)="agregarAuto()" type="submit" class="btn btn-guardar btn-sm">Guardar</button>
+            </div>            
+          </div>  
+        </form>      
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 class="card-title">Lista de Automóviles</h3>
+      </div>
+      <div class="col-sm-6 text-end">
+        <button class="btn btn-warning btn-sm" type="button" (click)="getordenarPorPrioridad()">Ordenar por Prioridad</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <ul cListGroup>
+  @for (item of listaAutos; track item) {
+    <li cListGroupItem>
+      {{item.marca}} - {{item.prioridad}}
+    </li>
+  }  
+</ul> -->
+
+<table class="table table-dark table-striped table-sm table-responsive custom-table">
+  <thead>
+    <tr>
+      <th>Prioridad</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Año</th>
+      <th>Precio</th>
+      <th>Color</th>
+      <th>Capacidad</th>
+      <th>Transmisión</th>
+      <th>Precio/Venta</th>
+      <th>Disponibilidad</th>
+      <th>Descripción</th>
+      <th class="action-column">Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listaAutos">
+      <td>{{ item.prioridad }}</td>
+      <td>{{ item.marca }}</td>
+      <td>{{ item.modelo }}</td>
+      <td>{{ item.year }}</td>
+      <td>{{ item.precio }}</td>
+      <td>{{ item.color }}</td>
+      <td>{{ item.capacidad }}</td>
+      <td>{{ item.transmision }}</td>
+      <td>{{ item.precioventa }}</td>
+      <td>{{ item.disponibilidad }}</td>
+      <td>{{ item.descripcion }}</td>
+      <td class="action-column">
+        <div style="min-width:150px; text-align: right;">
+          <button class="btn btn-primary btn-sm me-2" (click)="editarAuto(item)"><i class="fa-solid fa-pen"></i>Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="eliminarAuto(item)">Eliminar</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

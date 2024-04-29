@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Suma Total del "PrecioVenta" de los Autos Vendidos</h2>   
+    <button (click)="calcularPrecioVenta()" cButton>Total PrecioVenta</button> 
+</div>
+
+<table class="table mt-4">
+    <thead>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Precio</th>
+        <th>Color</th>
+        <th>Precio/Venta</th>
+        <th>Disponibilidad</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listaAutos">
+            <td>{{ item.marca }}</td>
+            <td>{{ item.modelo }}</td>
+            <td>{{ item.year }}</td>
+            <td>{{ item.precio }}</td>
+            <td>{{ item.color }}</td>
+            <td>{{ item.precioventa }}</td>
+            <td>{{ item.disponibilidad }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<c-modal id="liveDemoModal" [visible]="visible" (visibleChange)="handleLiveDemoChange($event)">
+    <c-modal-header>
+        <h5 cModalTitle>En total son: <span>{{ autosVendidos.length }} autos vendidos</span></h5>
+        <button (click)="calcularPrecioVenta()" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+        <p>La suma total del PrecioVenta es: <br> <span>{{ totalPrecioVenta | currency }}</span></p>
+    </c-modal-body>
+    <c-modal-footer>
+        <button (click)="calcularPrecioVenta()" cButton color="secondary">
+            Cerrar
+        </button>
+    </c-modal-footer>
+</c-modal>

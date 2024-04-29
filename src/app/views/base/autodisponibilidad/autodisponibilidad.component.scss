@@ -1,0 +1,138 @@
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+.form-group input[type="text"] {
+    margin-right: 30px;
+    width: 50%;
+}
+
+.btn {
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indicar que es un botón al pasar el cursor */
+    transition: background-color 0.3s ease; /* Efecto de transición suave */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el cursor */
+}
+
+.btn-outline-warning {
+    color: #ffc107; /* Amarillo */
+    border-color: #ffc107;
+    
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffc107; /* Amarillo de fondo al pasar el cursor */
+    color: black; /* Texto negro sobre fondo amarillo */
+}
+
+.container {
+    width: 100%; // Ancho del contenedor
+    margin: 0 auto; // Centrar el contenedor horizontalmente
+    padding: 10px; // Espacio interior del contenedor
+    border-radius: 5px; // Borde redondeadol para el contenedor
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra sutil
+    background: linear-gradient(to right, #787272, #f7e2e2, #161212);
+}
+
+/* Estilo general para la tabla */
+.table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Estilo para el encabezado de la tabla */
+.table thead th {
+    background: linear-gradient(to right, #000000, #6a6965); // Degradado de colores para el fondo del encabezado 
+    color: #fff; // Color del texto en el encabezado 
+  }
+  /* Estilo para las celdas del encabezado */
+th {
+    padding: 10px 20px; // Añade espacio alrededor del texto de las celdas del encabezado 
+    border: 1px solid #fff; // Añade un borde blanco a las celdas del encabezado 
+}
+/* Estilo para las filas del cuerpo de la tabla */
+tbody tr {
+    background-color: #f8f9fa; /* Color de fondo gris claro para las filas */
+    transition: background-color 0.3s ease; /* Añade una transición suave al cambiar el color de fondo al pasar el cursor */
+  }
+  
+  /* Estilo para las celdas del cuerpo de la tabla */
+  td {
+    padding: 10px; /* Añade espacio alrededor del texto de las celdas del cuerpo */
+    border: 1px solid #161414; /* Añade un borde gris claro a las celdas del cuerpo */
+  }
+  
+  /* Estilo para las filas alternas (rayas de cebra) */
+  tbody tr:nth-child(odd) {
+    background-color: #fff; /* Color de fondo blanco para las filas alternas */
+  }
+  
+  /* Estilo al pasar el cursor sobre una fila */
+  tbody tr:hover {
+    background-color: #e8e8e8; /* Color de fondo gris claro al pasar el cursor sobre una fila */
+  }
+
+.disponibilidad-column {
+    background-color: #c8d6e8;
+    color: rgb(255, 42, 0);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* .container {
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0); // Gradient from light gray to slightly darker gray 
+    padding: 20px; // Adds padding around the content 
+    border-radius: 5px; // Creates rounded corners for a softer look 
+  } */
+
+
+
+/*    Estilos  para los botones  */
+/* .btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} */
+
+/* .btn.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: 1px solid #dc3545;
+} */
+
+/* .btn.btn-outline-warning {
+    background-color: transparent;
+    color: #ffc107;
+    border: 1px solid #ffc107;
+} */
+
+/* .btn.btn-danger:hover,
+.btn.btn-outline-warning:hover {
+    background-color: #fff;
+    color: #000;
+} */
+
+/* .btn.btn-danger:hover {
+    border: 1px solid #dc3545;
+} */
+
+/* .btn.btn-outline-warning:hover {
+    border: 1px solid #ffc107;
+} */

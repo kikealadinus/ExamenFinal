@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Consultar Autos Por Disponiblidad</h2>
+    <div class="form-group">
+        <input type="text" class="form-control" name="disponibilidad" id="disponibilidad" [(ngModel)]="disponibilidadBuscada">
+        <button class="btn btn-danger" (click)="buscarAutosPorDisponiblidad()">Buscar</button>
+        <button class="btn btn-outline-warning mx-3" type="button" (click)="resetearInput()">Resetear</button>
+    </div>
+</div>
+
+<div *ngIf="!disponibilidadEncontrada" style="display: none;">
+    <p>No se encontraron autos para la marca "{{ disponibilidadBuscada }}"</p>
+</div>
+
+<div *ngFor="let auto of listaAutosPorDisponibilidad">
+    <table class="table" *ngIf="tablaVisible">
+        <thead class="thead-dark">
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Color</th>
+                <th>Precio</th>
+                <th>Diponiblidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ auto.marca }}</td>
+                <td>{{ auto.modelo }}</td>
+                <td>{{ auto.year }}</td>
+                <td>{{ auto.color }}</td>
+                <td>{{ auto.precio }}</td>
+                <td class="disponibilidad-column">{{ auto.disponibilidad }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
